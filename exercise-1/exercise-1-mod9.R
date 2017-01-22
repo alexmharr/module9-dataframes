@@ -20,23 +20,11 @@ games$diff <- games$points - games$points.against
 # Create a new column "won" which is TRUE if the Seahawks won
 games$won <- games$diff > 0
 # Create a vector of the opponent names corresponding to the games played
-opponent.names <- c("49ers", "Cardinals",	"Rams", "Packers",	
-                    "Panthers",	
-                    "Buccaneers",	
-                    "Eagles",	
-                    "Patriots",
-                    "Bills",	
-                    "Saints",
-                    "Cardinals",	
-                    "Falcons",	
-                    "Jets"	
-                    49ers	
-                    Rams	
-                    Dolphins )
-
+opponents <- c("49ers", "Cardinals",	"Rams", "Packers",	"Panthers",	"Buccaneers",	"Eagles",	"Patriots","Bills",	"Saints","Cardinals",	"Falcons",	"Jets"	,"49ers"	,"Rams"	, "Dolphins")
+opponents
 # Assign your dataframe rownames of their opponents
-
-	
-		
+#rownames(games) <- opponents
+rownames(games) <- make.names(opponents, unique = TRUE)
+View(games)
 
 # View your data frame to see how it has changed!

@@ -48,9 +48,9 @@ mean(salaries$raise)
 ### Bonus ###
 
 # Write a .csv file of your salaries to your working directory
-
-
+write.csv(salaries, "salaries.csv")
 # For people who did not get a raise, how much money did they lose?
-
+lost.money <- salaries$raise[salaries$raise < 0]
+sum(lost.money)
 
 # Is that what you expected them to lose based on how you generated their salaries?
